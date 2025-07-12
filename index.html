@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>I'm Sorry Shreya 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #ffe6f0;
+      font-family: 'Comic Sans MS', cursive;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      background: #fff;
+      padding: 40px;
+      border-radius: 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    h1 {
+      color: #ff4d88;
+      font-size: 2.5em;
+    }
+
+    p {
+      color: #333;
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .btn {
+      background-color: #ff4d88;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1em;
+      border-radius: 20px;
+      margin: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #e6005c;
+    }
+
+    #angryBtn {
+      position: absolute;
+      transition: all 0.4s ease;
+    }
+
+    #hearts {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2em;
+      animation: float 2s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(-15px); }
+      100% { transform: translateX(-50%) translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div id="hearts">💗💖💓💞</div>
+    <h1>I'm Sorry, Shreya 😢</h1>
+    <p>I know I made a mistake. Please forgive me.<br>You mean the world to me and I never want to hurt you. 💌</p>
+
+    <div class="buttons">
+      <button class="btn" onclick="alert('Yay! I love you Shreya! 💕')">It's OK 😊</button>
+      <button class="btn" id="angryBtn" onmouseover="moveButton()">I'm Still Angry 😠</button>
+    </div>
+  </div>
+
+  <script>
+    function moveButton() {
+      const btn = document.getElementById('angryBtn');
+      const x = Math.random() * (window.innerWidth - 200);
+      const y = Math.random() * (window.innerHeight - 200);
+      btn.style.left = `${x}px`;
+      btn.style.top = `${y}px`;
+    }
+  </script>
+
+</body>
+</html>
